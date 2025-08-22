@@ -1,0 +1,14 @@
+name: ip2proxy
+description: A Dart library for querying proxy information using the IP2Proxy database.
+version: 3.0.0
+repository: https://github.com/ip2location/ip2proxy-dart
+
+environment:
+  sdk: '>=3.8.2 <4.0.0'
+
+dependencies:
+  synchronized: ^3.0.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.24.0
