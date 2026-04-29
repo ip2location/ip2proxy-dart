@@ -511,7 +511,7 @@ class IP2Proxy {
           record.isProxy =
               (record.countryShort == '-' || record.proxyType == '-')
               ? 0
-              : ((record.proxyType == 'DCH' || record.proxyType == 'SES')
+              : ((record.proxyType == 'DCH' || record.proxyType == 'SES' || record.proxyType == 'AIC')
                     ? 2
                     : 1);
 

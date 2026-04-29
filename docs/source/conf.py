@@ -4,11 +4,11 @@
 # -- Project information
 
 project = 'IP2Proxy Dart'
-copyright = '2025, IP2Location'
+copyright = '2026, IP2Location'
 author = 'IP2Location'
 
-release = '3.0.0'
-version = '3.0.0'
+release = '3.1.0'
+version = '3.1.0'
 
 # -- General configuration
 
