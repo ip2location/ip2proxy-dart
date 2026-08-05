@@ -51,6 +51,7 @@ enum _Modes {
 /// The commercial BIN file can be downloaded from https://www.ip2location.com.
 /// The free LITE BIN file can be downloaded from https://lite.ip2location.com.
 class IP2Proxy {
+  /// The path to the IP2Proxy BIN database file.
   late final String databasePath;
   late final File _binFile;
   MetaData? _metaData;
@@ -103,6 +104,7 @@ class IP2Proxy {
     });
   }
 
+  /// Initializes with the BIN [databasePath].
   IP2Proxy({required this.databasePath}) {
     _binFile = File(databasePath);
   }
@@ -218,66 +220,82 @@ class IP2Proxy {
 
   int _calcOffset(int pos) => (pos != 0) ? (pos - 2) << 2 : 0;
 
+  /// Returns all available result fields.
   Future<ProxyResult> getAll(String? ipAddress) async {
     return await _query(ipAddress);
   }
 
+  /// Returns [ProxyResult.isProxy].
   Future<ProxyResult> getIsProxy(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.isProxy);
   }
 
+  /// Returns [ProxyResult.proxyType].
   Future<ProxyResult> getProxyType(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.proxyType);
   }
 
+  /// Returns [ProxyResult.countryShort].
   Future<ProxyResult> getCountryShort(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.countryShort);
   }
 
+  /// Returns [ProxyResult.countryLong].
   Future<ProxyResult> getCountryLong(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.countryLong);
   }
 
+  /// Returns [ProxyResult.region].
   Future<ProxyResult> getRegion(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.region);
   }
 
+  /// Returns [ProxyResult.city].
   Future<ProxyResult> getCity(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.city);
   }
 
+  /// Returns [ProxyResult.isp].
   Future<ProxyResult> getIsp(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.isp);
   }
 
+  /// Returns [ProxyResult.domain].
   Future<ProxyResult> getDomain(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.domain);
   }
 
+  /// Returns [ProxyResult.usageType].
   Future<ProxyResult> getUsageType(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.usageType);
   }
 
+  /// Returns [ProxyResult.asn].
   Future<ProxyResult> getAsn(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.asn);
   }
 
+  /// Returns [ProxyResult.asName].
   Future<ProxyResult> getAsName(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.asName);
   }
 
+  /// Returns [ProxyResult.lastSeen].
   Future<ProxyResult> getLastSeen(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.lastSeen);
   }
 
+  /// Returns [ProxyResult.threat].
   Future<ProxyResult> getThreat(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.threat);
   }
 
+  /// Returns [ProxyResult.provider].
   Future<ProxyResult> getProvider(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.provider);
   }
 
+  /// Returns [ProxyResult.fraudScore].
   Future<ProxyResult> getFraudScore(String? ipAddress) async {
     return await _query(ipAddress, mode: _Modes.fraudScore);
   }

@@ -7,8 +7,8 @@ project = 'IP2Proxy Dart'
 copyright = '2026, IP2Location'
 author = 'IP2Location'
 
-release = '3.1.0'
-version = '3.1.0'
+release = '3.1.1'
+version = '3.1.1'
 
 # -- General configuration
 

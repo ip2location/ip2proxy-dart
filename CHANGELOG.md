@@ -1,3 +1,9 @@
+## 3.1.1
+
+**Released on:** 2026-08-05
+
+- Added more documentations.
+
 ## 3.1.0
 
 **Released on:** 2026-04-29
